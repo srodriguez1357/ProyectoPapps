@@ -1,0 +1,378 @@
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
+/**
+ * Generated class for the ProductosPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
+@Component({
+  selector: 'page-productos',
+  templateUrl: 'productos.html',
+})
+export class ProductosPage {
+
+  productos=[
+    {
+      id: 0,
+      imagen:'../asstes/imgs/MF.jpg',
+      nombre:'Halcón Milenario',
+      precio:'₿551,390,290',
+
+        vender: {
+        vendedor:'Watto',
+        valoracionv:[1, 2]
+        },
+
+          review: [{
+            username: 'MarleneShip',
+            avatar: '../assets/imgs/Avatar3.png',
+            valoracion: [1, 2, 3, 4, 5],
+            reseña:'Spicy jalapeno bacon ipsum dolor amet consequat sed reprehenderit aliquip, ea voluptate pork loin dolore strip steak et',
+            date:'11/09/2051'
+          }],
+
+          date: [{
+              fecha:'09/01/2050',
+              disponibles:'0'
+          }]
+    },
+
+    {
+      id: 1,
+      imagen:'../asstes/imgs/Arwing.jpg',
+      nombre:'Arwing',
+      precio:'₿17,580,000',
+
+        vender: {
+        vendedor:'Falco',
+        valoracionv:[1, 2, 3, 4, 5]
+        },
+
+          review: [{
+            username: 'MarPlanet',
+            avatar: '../assets/imgs/Marvatar.png',
+            valoracion: [1, 2, 3, 4 ],
+            reseña:'Non porchetta commodo bresaola enim labore. Excepteur prosciutto kevin, anim incididunt chicken cupim ut aliqua buffalo.',
+            date:'05/12/2056'
+          }],
+
+          date: [{
+              fecha:'11/10/2050',
+              disponibles:'3'
+          }]
+    },
+
+    {
+      id: 2,
+      imagen:'../asstes/imgs/Axiom.jpg',
+      nombre:'Axiom',
+      precio:'₿777,900,000',
+
+        vender: {
+        vendedor:'BNL',
+        valoracionv:[1, 2, 3]
+        },
+
+          review: [{
+            username: 'AtomLene',
+            avatar: '../assets/imgs/Cavatar.png',
+            valoracion: [1, 2, 3, 4, 5],
+            reseña:'upim fatback dolor ex sausage in. Consequat occaecat salami esse alcatra sirloin rump consectetur leberkas non pork. Anim burgdoggen ribeye in tail in velit',
+            date:'27/12/2050'
+          }],
+
+          date: [{
+              fecha:'11/10/2050',
+              disponibles:'1'
+          }]
+    },
+
+    {
+      id: 3,
+      imagen:'../asstes/imgs/Bubbleship.jpg',
+      nombre:'Bubbleship',
+      precio:'₿33,000,050',
+
+        vender: {
+        vendedor:'BNL',
+        valoracionv:[1, 2, 3]
+        },
+
+          review: [{
+            username: 'AtomLene',
+            avatar: '../assets/imgs/Cavatar.png',
+            valoracion: [1, 2, 3, 4],
+            reseña:'Elit pancetta swine, est t-bone occaecat brisket non fatback.',
+            date:'02/03/2050'
+          }],
+
+          date: [{
+              fecha:'01/02/2050',
+              disponibles:'15'
+          }]
+    },
+
+    {
+      id: 4,
+      imagen:'../asstes/imgs/Bubbleship.jpg',
+      nombre:'Bubbleship',
+      precio:'₿33,000,050',
+
+        vender: {
+        vendedor:'BNL',
+        valoracionv:[1, 2, 3]
+        },
+
+          review: [{
+            username: 'AtomLene',
+            avatar: '../assets/imgs/Cavatar.png',
+            valoracion: [1, 2, 3, 4],
+            reseña:'Elit pancetta swine, est t-bone occaecat brisket non fatback.',
+            date:'02/03/2050'
+          }],
+
+          date: [{
+              fecha:'01/02/2050',
+              disponibles:'15'
+          }]
+    },
+
+    {
+        id: 5,
+        imagen:'../asstes/imgs/Corvette.jpg',
+        nombre:'Corvette',
+        precio:'₿345,600,799',
+  
+          vender: {
+          vendedor:'NASA',
+          valoracionv:[1, 2, 3, 4]
+          },
+  
+            review: [{
+              username: 'Space Trooper',
+              avatar: '../assets/imgs/Avatar2.png',
+              valoracion: [1, 2, 3, 4],
+              reseña:'Elit pancetta swine, est t-bone occaecat brisket non fatback.',
+              date:'17/12/2052'
+            }],
+  
+            date: [{
+                fecha:'13/05/2050',
+                disponibles:'1'
+            }]
+      },
+
+      {
+        id: 6,
+        imagen:'../asstes/imgs/POD.jpg',
+        nombre:'Pod de carreras',
+        precio:'₿7,100,000',
+  
+          vender: {
+          vendedor:'Watto',
+          valoracionv:[1, 2]
+          },
+  
+            review: [{
+              username: 'Corredor de Pods',
+              avatar: '../assets/imgs/Avatar3.png',
+              valoracion: [1],
+              reseña:'Elit pancetta swine, est t-bone occaecat brisket non fatback.',
+              date:'02/03/2053'
+            }],
+  
+            date: [{
+                fecha:'02/05/2051',
+                disponibles:'4'
+            }]
+      },
+
+      {
+        id: 7,
+        imagen:'../asstes/imgs/Ranger.jpg',
+        nombre:'Ranger',
+        precio:'₿52,900,000',
+  
+          vender: {
+          vendedor:'NASA',
+          valoracionv:[1, 2, 3, 4]
+          },
+  
+            review: [{
+              username: 'Astronaut',
+              avatar: '../assets/imgs/Avatar2.png',
+              valoracion: [1, 2, 3, 4, 5],
+              reseña:'Ut in eros ut risus finibus tempor. Phasellus eu dignissim odio. Aliquam porta sodales tortor eget semper. Fusce ac eleifend velit.',
+              date:'11/11/2056'
+            }],
+  
+            date: [{
+                fecha:'01/07/2052',
+                disponibles:'2'
+            }]
+      },
+
+      {
+        id: 8,
+        imagen:'../asstes/imgs/Speeder.png',
+        nombre:'Speeder',
+        precio:'₿570,600',
+  
+          vender: {
+          vendedor:'Watto',
+          valoracionv:[1, 2]
+          },
+  
+            review: [{
+              username: 'Corredor de Pods',
+              avatar: '../assets/imgs/Avatar3.png',
+              valoracion: [1, 2, 3, 4],
+              reseña:'Pellentesque venenatis lectus sagittis, iaculis diam quis, rhoncus ipsum.',
+              date:'30/06/2054'
+            }],
+  
+            date: [{
+                fecha:'29/06/2056',
+                disponibles:'11'
+            }]
+      },
+
+      {
+        id: 9,
+        imagen:'../asstes/imgs/Tie.jpg',
+        nombre:'Caza TIE',
+        precio:'₿541,000,999',
+  
+          vender: {
+          vendedor:'Watto',
+          valoracionv:[1, 2]
+          },
+  
+            review: [{
+              username: 'Corredor de Pods',
+              avatar: '../assets/imgs/Avatar3.png',
+              valoracion: [1, 2, 3, 4, 5],
+              reseña:'Quisque felis dui, mattis vel elit quis, aliquet lobortis nulla. Aliquam a justo ornare.',
+              date:'30/10/2054'
+            }],
+  
+            date: [{
+                fecha:'10/09/2056',
+                disponibles:'5'
+            }]
+      },
+      
+      {
+        id: 10,
+        imagen:'../asstes/imgs/XW.jpg',
+        nombre:'X-Wing',
+        precio:'₿232,500,000',
+  
+          vender: {
+          vendedor:'Watto',
+          valoracionv:[1, 2]
+          },
+  
+            review: [{
+              username: 'Corredor de Pods',
+              avatar: '../assets/imgs/Avatar3.png',
+              valoracion: [1, 2, 3, 4, 5],
+              reseña:'maximus metus id, accumsan ipsum. Proin commodo, quam vitae volutpat pellentesque.',
+              date:'25/11/2052'
+            }],
+  
+            date: [{
+                fecha:'07/02/2051',
+                disponibles:'7'
+            }]
+      },
+
+      {
+        id: 11,
+        imagen:'../asstes/imgs/YW.jpg',
+        nombre:'Y-Wing',
+        precio:'₿182,900,000',
+  
+          vender: {
+          vendedor:'Watto',
+          valoracionv:[1, 2]
+          },
+  
+            review: [{
+              username: 'Corredor de Pods',
+              avatar: '../assets/imgs/Avatar3.png',
+              valoracion: [1, 2, 3, 4],
+              reseña:' massa mauris aliquam nunc, ut posuere magna massa quis lacus.',
+              date:'26/11/2052'
+            }],
+  
+            date: [{
+                fecha:'17/02/2051',
+                disponibles:'6'
+            }]
+      },
+
+      {
+        id: 12,
+        imagen:'../asstes/imgs/Aurora.jpg',
+        nombre:'Aurora',
+        precio:'₿780,555,000',
+  
+          vender: {
+          vendedor:'Falco',
+          valoracionv:[1, 2, 3, 4]
+          },
+  
+            review: [{
+              username: 'Atomlene',
+              avatar: '../assets/imgs/Cavatar.png',
+              valoracion: [1, 2, 3, 4, 5],
+              reseña:'Duis ac aliquet dui.',
+              date:'15/11/2051'
+            }],
+  
+            date: [{
+                fecha:'17/01/2051',
+                disponibles:'2'
+            }]
+      },
+
+      {
+        id: 13,
+        imagen:'../asstes/imgs/CityDestroyerMothership.jpg',
+        nombre:'City Destoyer Invasion Mothership',
+        precio:'₿2,000,000,000',
+  
+          vender: {
+          vendedor:'BNL',
+          valoracionv:[1, 2, 3, 4]
+          },
+  
+            review: [{
+              username: 'Atomlene',
+              avatar: '../assets/imgs/Cavatar.png',
+              valoracion: [1, 2, 3, 4],
+              reseña:'Proin commodo, quam vitae volutpat pellentesque, massa mauris aliquam nunc, ut posuere magna massa quis lacus.',
+              date:'15/11/2051'
+            }],
+  
+            date: [{
+                fecha:'17/01/2051',
+                disponibles:'2'
+            }]
+      },
+      
+  ];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad ProductosPage');
+  }
+
+}
